@@ -8,11 +8,16 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Servește fișierele statice din rădăcina proiectului
-app.use(express.static(path.join(__
+app.use(express.static(path.join(__dirname)));
+
+// === API-urile ===
+
+// Endpoint simplu pentru test
 app.get("/api/test", (req, res) => {
     res.json({ message: "Serverul funcționează corect!" });
 });
 
+// Endpoint pentru procesarea imaginilor
 app.post("/api/process-image", (req, res) => {
     const { imageUrl } = req.body;
 
