@@ -17,7 +17,6 @@ app.get("/api/test", (req, res) => {
     res.json({ message: "Serverul funcționează corect!" });
 });
 
-// API pentru procesarea imaginilor
 app.post("/api/process-image", (req, res) => {
     const { imageUrl } = req.body;
 
