@@ -8,11 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Servește fișierele statice din rădăcina proiectului
-app.use(express.static(path.join(__dirname)));
-
-// === Definirea API-urilor ===
-
-// Exemplu API simplu pentru test
+app.use(express.static(path.join(__
 app.get("/api/test", (req, res) => {
     res.json({ message: "Serverul funcționează corect!" });
 });
